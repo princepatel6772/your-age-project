@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-page">
+    <div class="glass-box">
+        <h1>Welcome</h1>
+        <input type="text" id="userName" placeholder="Enter Your Name" required />
+        <button onclick="saveUserName()">Submit</button>
+    </div>
+
+    <script>
+        function saveUserName() {
+            const userName = document.getElementById("userName").value;
+            if (userName) {
+                localStorage.setItem("userName", userName);
+                window.location.href = "birthday.html";
+            } else {
+                alert("Please enter your name.");
+            }
+        }
+    </script>
+</body>
+</html>
